@@ -40,3 +40,28 @@ let score = 0;
 
 //Initializing time
 let time = 10;
+
+// Part 1
+
+// Show a random word
+function addWordToDOM() {
+  randomWord = words[Math.floor(Math.random() * words.length)];
+  word.innerHTML = randomWord;
+}
+
+// Add 1 to the score
+function updateScore() {
+  score++;
+  scoreEl.innerHTML = score;
+}
+
+// Runs when you type
+text.addEventListener("input", function (e) {
+  if (e.target.value === randomWord) {
+    updateScore();
+    addWordToDOM();
+    time += timeBonus;
+    timeEl.innerHTML = time + "s";
+    e.target.value = "";
+  }
+});
