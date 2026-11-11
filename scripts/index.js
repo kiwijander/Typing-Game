@@ -89,3 +89,23 @@ function gameOver() {
   endgameEl.style.display = "flex";
 }
 
+// Part 3
+
+// Hide or show settings
+settingsBtn.addEventListener("click", function () {
+  settings.classList.toggle("hide");
+});
+
+// Change difficulty
+let timeBonus = 5;
+settingsForm.addEventListener("change", function (e) {
+  const difficulty = e.target.value;
+  if (difficulty === "easy") timeBonus = 5;
+  if (difficulty === "medium") timeBonus = 3;
+  if (difficulty === "hard") timeBonus = 2;
+});
+
+// Start
+text.focus();
+addWordToDOM();
+const timeInterval = setInterval(updateTime, 1000);
