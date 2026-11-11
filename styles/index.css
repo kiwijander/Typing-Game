@@ -128,3 +128,135 @@ input {
   height: 100%;
   z-index: 1;
 }
+
+/* Page background */
+body {
+  background-color: #f4f2ff;
+}
+
+/* Buttons */
+button {
+  border: 0;
+  font-family: inherit;
+  font-weight: 500;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* Button hover */
+button:hover {
+  transform: translateY(-1px);
+}
+
+/* Button click */
+button:active {
+  transform: translateY(0);
+}
+
+/* Dropdown */
+select {
+  border: 1px solid #e3ddff;
+  padding: 8px 12px;
+  background-color: #ffffff;
+  font-family: inherit;
+}
+
+/* Settings button */
+.settings-btn {
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #6026ff;
+  font-size: 16px;
+  box-shadow: 0 4px 14px rgba(96, 38, 255, 0.25);
+}
+
+/* Difficulty label */
+.difficulty {
+  font-size: 13px;
+  margin-right: 12px;
+}
+
+/* Game card */
+.container {
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(96, 38, 255, 0.25);
+  padding: 30px;
+  max-width: 92vw;
+}
+
+/* Title */
+h2 {
+  font-size: 30px;
+  letter-spacing: 3px;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 50px;
+}
+
+/* Small text */
+small {
+  opacity: 0.8;
+}
+
+/* Word */
+h1 {
+  font-size: 46px;
+}
+
+/* Input */
+input {
+  border: 2px solid transparent;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: inherit;
+  text-align: center;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Input focus */
+input:focus {
+  outline: 0;
+  border-color: #ffde17;
+  box-shadow: 0 0 0 4px rgba(255, 222, 23, 0.25);
+}
+
+/* Time and score */
+.score-container,
+.time-container {
+  top: 90px;
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+/* Score position */
+.score-container {
+  right: 30px;
+}
+
+/* Time position */
+.time-container {
+  left: 30px;
+}
+
+/* End screen */
+.end-game-container {
+  border-radius: 16px;
+}
+
+/* Reload button */
+.end-game-container button {
+  background-color: #ffde17;
+  color: #1f1b2e;
+  padding: 10px 24px;
+  font-weight: 600;
+}
+
+/* Small screen */
+@media (max-width: 540px) {
+  input {
+    width: 100%;
+  }
+}
